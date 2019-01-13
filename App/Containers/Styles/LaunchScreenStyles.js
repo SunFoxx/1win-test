@@ -1,18 +1,30 @@
 import { StyleSheet } from 'react-native'
-import { Metrics, ApplicationStyles } from '../../Themes/'
+import { Fonts, Metrics } from '../../Themes/'
 
 export default StyleSheet.create({
-  ...ApplicationStyles.screen,
-  container: {
-    paddingBottom: Metrics.baseMargin
+  containerView: {
+    backgroundColor: 'gray',
+    marginVertical: Metrics.marginVertical,
+    flex: 1
   },
-  logo: {
-    marginTop: Metrics.doubleSection,
-    height: Metrics.images.logo,
-    width: Metrics.images.logo,
-    resizeMode: 'contain'
+  outerList: {
+    backgroundColor: 'white',
+    flexDirection: 'column'
   },
-  centered: {
-    alignItems: 'center'
+  outerListItem: {
+    flex: 1,
+    paddingHorizontal: Metrics.marginHorizontal,
+    borderBottomWidth: 1
+  },
+  outerListButton: {
+    paddingVertical: Metrics.doubleBaseMargin
+  },
+  innerList: {
+  },
+  titleText: {
+    ...Fonts.style.normal
+  },
+  subtitleText: {
+    ...Fonts.style.small
   }
 })

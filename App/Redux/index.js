@@ -4,9 +4,9 @@ import rootSaga from '../Sagas/'
 
 /* ------------- Assemble The Reducers ------------- */
 export const reducers = combineReducers({
+  // add your new reducers here v----
   nav: require('./NavigationRedux').reducer,
-  github: require('./GithubRedux').reducer,
-  search: require('./SearchRedux').reducer
+  sportList: require('./SportListRedux').reducer
 })
 
 export default () => {
@@ -14,8 +14,7 @@ export default () => {
 
   if (module.hot) {
     module.hot.accept(() => {
-      const nextRootReducer = require('./').reducers
-      store.replaceReducer(nextRootReducer)
+      store.replaceReducer(require('./').reducers)
 
       const newYieldedSagas = require('../Sagas').default
       sagasManager.cancel()

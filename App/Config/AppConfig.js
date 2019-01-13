@@ -1,6 +1,6 @@
 // Simple React Native specific changes
 
 export default {
-  // font scaling override - RN default is on
-  allowTextFontScaling: true
+  socketPath: 'http://localhost:19002', // 190.115.24.50:19002 http://localhost:19002
+  apiPath: 'example.com'
 }
